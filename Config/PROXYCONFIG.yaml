@@ -1,0 +1,35 @@
+# 爬虫通用代理配置
+
+## 测试网站响应时长配置
+webTestTimeOut:
+    baiduTimeOut: 5
+    telnetTimeOut: 5
+    targetTimeOut: 5
+
+## 爬虫基本配置
+spiderConfig:
+    proxiesIP:
+      proxies: "http://123.207.35.36:5010/get/"
+    xici:
+        url: "https://www.xicidaili.com/"
+        name: "西刺代理"
+        timeOut: 10
+        updateTime: 15
+        ifRun: True
+    wuyou:
+        url: "http://www.data5u.com/free/index.html"
+        name: "无忧代理"
+        timeOut: 10
+        updateTime: 15
+        ifRun: True
+
+## 周期检查配置
+checkoutConfig:
+    ## 初始代理数据表keyName
+    redisBaseKeyName: "proxiesInitial"
+    ## 初始代理百度验证评分keyName
+    proxiesinitialGrade: "proxiesInitialGrade"
+    proxiesGrade10: "proxiesGrade10"
+    proxiesGrade8: "proxiesGrade8"
+    proxiesGrade6: "proxiesGrade6"
+    proxiesGrade4: "proxiesGrade4"
